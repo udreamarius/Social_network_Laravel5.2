@@ -10,7 +10,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Home</a>
                     <a class="navbar-brand" href="{{ route('home') }}">Chat</a>
                     <a class="navbar-brand" href="#">Blog</a>
                     <a class="navbar-brand" href="#">Contact</a>
@@ -31,7 +30,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Home</a>
                     <a class="navbar-brand" href="{{ route('dashboard') }}">Chat</a>
                     <a class="navbar-brand" href="#">Blog</a>
                     <a class="navbar-brand" href="#">Contact</a>
