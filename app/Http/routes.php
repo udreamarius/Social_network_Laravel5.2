@@ -27,7 +27,6 @@
 		Route::get('/dashboard', [
 		    'uses' => 'PostController@getDashboard',
 		    'as' => 'dashboard'
-		  
 		]);
 
 		Route::post('/sigin', [
@@ -43,7 +42,6 @@
 		Route::post('/createpost', [
 			'uses' => 'PostController@postCreatePost',
 			'as' => 'post.create'
-			
 			]);
 
 		Route::get('/delete-post/{post_id}', [
@@ -52,11 +50,27 @@
 			
 			]);
 
-		Route::post('/edit', function(\Illuminate\Http\Request $request) {
-	    	return response()->json(['message' => $request['postId']]);
-			})->name('edit');
+		Route::post('/edit', [
+			'uses' => 'PostController@postEditPost',
+			'as' => 'edit'
+			]);
 
 		Route::post('/like', [
 		    'uses' => 'PostController@postLikePost',
 		    'as' => 'like'
-		]);
+			]);
+
+		Route::get('/account', [
+			'uses' => 'UserController@getAccount',
+			'as' => 'account'
+			]);
+
+		Route::post('/updateaccount', [
+			'uses' => 'UserController@postSaveAccount',
+			'as' => 'account.save'
+			]);
+
+		Route::get('/images/{filename}', [
+			'uses' => 'UserController@getUserImage',
+			'as' => 'account.image'
+			]);
